@@ -36,10 +36,8 @@ rm -f /var/run/elasticsearch/elasticsearch.pid /var/run/logstash.pid \
 OUTPUT_LOGFILES=""
 
 
-## override default time zone (Etc/UTC) if TZ variable is set
-if [ ! -z "$TZ" ]; then
-  ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-fi
+## override default time zone variable is set
+ln -snf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo Asia/Shanghai > /etc/timezone
 
 
 ## start services as needed
