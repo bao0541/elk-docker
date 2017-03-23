@@ -11,6 +11,8 @@ FROM phusion/baseimage
 MAINTAINER Sebastien Pujadas http://pujadas.net
 ENV REFRESHED_AT 2017-01-13
 
+COPY sources.list /etc/apt/sources.list
+RUN apt-get update
 
 ###############################################################################
 #                                INSTALLATION
